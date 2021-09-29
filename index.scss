@@ -101,18 +101,35 @@ body {
     }
 }
 
-
 .c-sign-up {
-    position: absolute;
-    height: 341px;
-    top: 113px;
-    width: 1440px;
-    background-color: #00175A;
+    .c-background {
+        position: absolute;
+        height: 341px;
+        top: 113px;
+        width: 1440px;
+        background-color: #00175A;
+    }
+    .c-content {
+        position: absolute;
+        margin-left: 50px;
+        margin-top: 79px;
+    }
+    .c-barker {
+        background: #FDB92D;
+        width: 204px;
+        height: 28px;
+        padding: 4px 16px;
+        border-radius: 25px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .c-barker span {
+        display: inline-block;
+        padding: inherit;
+        color: #00175A;
+    }
 }
-.c-sign-up .c-content {
-    margin-left: 50px;
-    margin-top: 79px;
-}
+
 
 .text-uppercase {
     text-transform: uppercase;

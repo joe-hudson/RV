@@ -1,28 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-class Banner extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      class: this.props.class
-    };
-  }
-  render() {
-    return <div className={this.state.class}></div>;
-  }
-}
-
 class Text extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      class: this.props.class
-    };
+  render() {
+    return <span className={this.props.class}>{this.props.text}</span>;
   }
 }
 
-ReactDOM.render(
-  <Banner class="banner brand-announcement" />,
-  document.getElementById("root")
-);
+class Banner extends React.Component {
+  render() {
+    return (
+      <div className="c-banner">
+        <div className="c-brand-announcement">
+          <Text class="c-brand-name text-uppercase" text="My Brand" />
+          <div className="c-separator"></div>
+          <Text
+            class="c-announcement text-uppercase"
+            text="Enrollment Available"
+          />
+          <Text class="c-announcement-2" text="through 12/31/21" />
+        </div>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Banner class="c-banner" />, document.getElementById("root"));

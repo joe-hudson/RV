@@ -1,7 +1,8 @@
 body {
     font-family: "Montserrat", sans-serif;
 }
-.brand-announcement {
+
+.c-brand-announcement {
     position: absolute;
     left: 0%;
     right: 0%;
@@ -9,10 +10,12 @@ body {
     bottom: -18.1%;
     background: #F6F7F8;
     height: 124px;
-    width: 75%;
+    width: 1041px;
+    mix-blend-mode: multiply;
 }
 
-.brand-name {
+span.c-brand-name {
+    display: inline-block;
     position: absolute;
     left: 4.42%;
     right: 84.15%;
@@ -26,4 +29,46 @@ body {
     line-height: 30px;
     /* or 107% */
     color: #00175A;
+}
+
+span.c-announcement {
+    position: absolute;
+    left: 18.99%;
+    right: 51.23%;
+    top: 28.57%;
+    bottom: 50.48%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #00175A;
+}
+
+span.c-announcement-2 {
+    position: absolute;
+    left: 18.99%;
+    right: 60.55%;
+    top: 49.52%;
+    bottom: 29.52%;    
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #00175A;
+}
+
+div.c-separator {
+    position: absolute;
+    left: 17.48%;
+    right: 82.52%;
+    top: 22.57%;
+    bottom: 22.57%;
+
+    border: 2px solid #00175A;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
 }

@@ -44,12 +44,16 @@ class Banner extends React.Component {
               class="c-brand-name text-uppercase"
               text={content.brand_name}
             />
-            <div className="c-separator"></div>
-            <Text
-              class="c-announcement text-uppercase"
-              text={content.enrollment_available}
-            />
-            <Text class="c-announcement-2" text={content.enrollment_end} />
+            <span className="c-separator"></span>
+            <div className="c-announcement">
+              <span className="c-announcement-content">
+                <span className="text-uppercase">
+                  {content.enrollment_available}
+                </span>
+                <br />
+                {content.enrollment_end}
+              </span>
+            </div>
           </div>
         </div>
         <div className="c-product-background"></div>

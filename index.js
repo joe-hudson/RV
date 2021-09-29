@@ -56,17 +56,19 @@ class Banner extends React.Component {
             </div>
           </div>
         </div>
-        <div className="c-product-background"></div>
-        <div className="c-product-value-overlay"></div>
-        <Text
-          class="c-product-text c-product-up-to text-uppercase"
-          text={content.product_up_to}
-        />
-        <ProductValue value="119" class="c-product-value" />
-        <Text
-          class="c-product-text c-product-in-value text-uppercase"
-          text={content.product_in_value}
-        />
+        <div className="c-product">
+          <div className="c-product-value-overlay">
+            <Text
+              class="c-product-text c-product-up-to text-uppercase"
+              text={content.product_up_to}
+            />
+            <ProductValue value="119" class="c-product-value" />
+            <Text
+              class="c-product-text c-product-in-value text-uppercase"
+              text={content.product_in_value}
+            />
+          </div>
+        </div>
       </div>
     );
   }

@@ -60,58 +60,53 @@ body {
     color: #00175A;
 }
 
-.c-product-background {
-    position: absolute;
+.c-product {
+    position: relative;
     width: 916px;
     height: 534px;
     left: 673px;
-    top: 0px;
+    top: -124px;
     background-image: url('./images/food.png');
     background-repeat: no-repeat;
     z-index: 1;
 }
 
 .c-product-value-overlay {
-    position: absolute;
+    position: relative;
     width: 370px;
     height: 219px;
-    left: 1070px;
-    top: 173px;    
-    mix-blend-mode: multiply;
+    left: 397px;
+    top: 173px;
     background: rgba(0, 23, 90, 0.4);
     z-index: 2;
 }
-
 .c-product-text {
-    position: absolute;
-    display: inline-block;
+    position: relative;
+    display: block;
     text-align: right;
     height: 23px;
-    width: 162px;
     font-family: "Montserrat";
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 23px;
     color: #FFFFFF;
-    mix-blend-mode: normal;
     z-index: 5;
 }
 .c-product-up-to {
-    top: 188px;
-    left: 1239px;
+    top: 15px;
+    right: 32px;
 }
 .c-product-in-value {
-    top: 351px;
-    left: 1239px;
+    top: 15px;
+    right: 32px;
 }
 .c-product-value {
-    position: absolute;
-    display: inline-block;
-    width: 338px;
+    position: relative;
+    display: block;
     height: 122px;
-    top: 216px;
-    left: 1070px;
+    right: 32px;
+    top: 5px;
     font-family: "Montserrat";
     font-style: normal;
     font-weight: bold;

@@ -113,6 +113,7 @@ body {
         position: absolute;
         margin-left: 50px;
         margin-top: 79px;
+        color: #FFFFFF;
     }
     .c-barker {
         background: #FDB92D;
@@ -127,6 +128,16 @@ body {
         display: inline-block;
         padding: inherit;
         color: #00175A;
+    }
+    .c-food-pass {
+        font-size: 28px;
+        line-height: 32px;
+        margin-top: 18px;
+    }
+    .c-enroll {
+        margin-top: 12px;
+        font-size: 18px;
+        line-height: 22px;
     }
 }
 

@@ -26,3 +26,7 @@ ReactDOM.render(
   <ProductValue value="119" />,
   document.getElementById("product-value")
 );
+ReactDOM.render(
+  <ProductValue value="119" />,
+  document.getElementById("enroll-value")
+);

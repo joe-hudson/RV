@@ -1,10 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import product from "./images/food.png";
+
+const content = {
+  brand_name: "My Brand",
+  enrollment_available: "Enrollment Available",
+  enrollment_end: "through 12/31/21",
+  product_up_to: "up to",
+  product_in_value: "in value",
+  currency_symbol: "$"
+};
 
 class Text extends React.Component {
   render() {
     return <span className={this.props.class}>{this.props.text}</span>;
+  }
+}
+
+class ProductValue extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: props.value,
+      class: props.class
+    };
+  }
+  render() {
+    return (
+      <span className={this.state.class}>
+        {content.currency_symbol}
+        {this.state.value}
+      </span>
+    );
   }
 }
 
@@ -14,16 +40,29 @@ class Banner extends React.Component {
       <div className="container">
         <div className="c-banner">
           <div className="c-brand-announcement">
-            <Text class="c-brand-name text-uppercase" text="My Brand" />
+            <Text
+              class="c-brand-name text-uppercase"
+              text={content.brand_name}
+            />
             <div className="c-separator"></div>
             <Text
               class="c-announcement text-uppercase"
-              text="Enrollment Available"
+              text={content.enrollment_available}
             />
-            <Text class="c-announcement-2" text="through 12/31/21" />
+            <Text class="c-announcement-2" text={content.enrollment_end} />
           </div>
         </div>
         <div className="c-product-background"></div>
+        <div className="c-product-value-overlay"></div>
+        <Text
+          class="c-product-text c-product-up-to text-uppercase"
+          text={content.product_up_to}
+        />
+        <ProductValue value="119" class="c-product-value" />
+        <Text
+          class="c-product-text c-product-in-value text-uppercase"
+          text={content.product_in_value}
+        />
       </div>
     );
   }

@@ -69,6 +69,9 @@ class Banner extends React.Component {
             />
           </div>
         </div>
+        <div className="c-sign-up">
+          <span>cool</span>
+        </div>
       </div>
     );
   }

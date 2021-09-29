@@ -14,7 +14,7 @@ body {
     mix-blend-mode: multiply;
 }
 
-span.c-brand-name {
+.c-brand-name {
     display: inline-block;
     position: absolute;
     left: 4.42%;
@@ -31,7 +31,7 @@ span.c-brand-name {
     color: #00175A;
 }
 
-span.c-announcement {
+.c-announcement {
     position: absolute;
     left: 18.99%;
     right: 51.23%;
@@ -45,7 +45,7 @@ span.c-announcement {
     color: #00175A;
 }
 
-span.c-announcement-2 {
+.c-announcement-2 {
     position: absolute;
     left: 18.99%;
     right: 60.55%;
@@ -59,7 +59,7 @@ span.c-announcement-2 {
     color: #00175A;
 }
 
-div.c-separator {
+.c-separator {
     position: absolute;
     left: 17.48%;
     right: 82.52%;
@@ -67,6 +67,16 @@ div.c-separator {
     bottom: 22.57%;
 
     border: 2px solid #00175A;
+}
+
+.c-product-background {
+    position: absolute;
+    width: 916px;
+    height: 534px;
+    left: 673px;
+    top: 0px;
+    background: url('./images/food.png') no-repeat;
+    z-index: 1;
 }
 
 .text-uppercase {

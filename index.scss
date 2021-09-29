@@ -2,10 +2,6 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-.container {
-    width: 1440px;
-    margin: auto;
-}
 
 .c-brand-announcement {
     background: #F6F7F8;
@@ -39,7 +35,7 @@ body {
 .c-announcement {
     display: block;
     float: left;
-    margin-top: 35px;
+    margin-top: 32px;
     margin-left: 15px;
     font-family: "Montserrat";
     font-style: normal;
@@ -57,13 +53,14 @@ body {
     font-size: 18px;
     line-height: 22px;
     color: #00175A;
+    
 }
 
 .c-product {
     position: absolute;
     width: 916px;
     height: 534px;
-    right: 24px;
+    left: 681px;
     top: 8px;
     background-image: url('./images/food.png');
     background-repeat: no-repeat;
@@ -119,7 +116,7 @@ body {
 .c-sign-up {
     position: absolute;
     height: 341px;
-    top: 114px;
+    top: 113px;
     width: 1440px;
     background-color: #00175A;
 }

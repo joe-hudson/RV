@@ -1,0 +1,29 @@
+body {
+    font-family: "Montserrat", sans-serif;
+}
+.brand-announcement {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: -18.1%;
+    background: #F6F7F8;
+    height: 124px;
+    width: 75%;
+}
+
+.brand-name {
+    position: absolute;
+    left: 4.42%;
+    right: 84.15%;
+    top: 22.86%;
+    bottom: 22.86%;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 30px;
+    /* or 107% */
+    color: #00175A;
+}

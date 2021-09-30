@@ -214,6 +214,14 @@ $yellow: #FDB92D;
         line-height: 22px;
         font-weight: bold;
     }
+    .c-savings {
+        position: absolute;
+        top: 180px;
+        left: 990px;
+        font-size: 80px;
+        line-height: 22px;
+        font-weight: bold;
+    }
 
 }
 
@@ -251,6 +259,9 @@ $yellow: #FDB92D;
     }
     .jc-end {
         justify-content: end;
+    }
+    .jc-start {
+        justify-content: start;
     }
     .fd-col {
         flex-direction: column;

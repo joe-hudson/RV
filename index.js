@@ -97,7 +97,7 @@ class SavingsCalculator extends React.Component {
     return (
       <div className="flex-container">
         <div className="item auto jc-end fd-col">
-          <div className="label text-right">{content.monthly_spending}</div>
+          <div className="label t-right">{content.monthly_spending}</div>
           <div className="input">
             <input
               name="monthly_spending"
@@ -109,7 +109,7 @@ class SavingsCalculator extends React.Component {
         </div>
         <div className="c-spacer item"></div>
         <div className="item auto jc-start fd-col">
-          <div className="label text-left">{content.annual_savings}</div>
+          <div className="label t-left">{content.annual_savings}</div>
           <div className="c-savings">
             {content.currency_symbol}
             {this.state.savings}

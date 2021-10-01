@@ -1,9 +1,32 @@
 body {
     font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 22px;
 }
 
+/* variables */
 $blue: #00175A;
 $yellow: #FDB92D;
+
+/* fonts */
+h1 {
+    font-size: 42px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+/* utilities */
+.t-center {
+    text-align: center;
+}
+.t-right {
+    text-align: right;
+}
+.t-left {
+    text-align: left;
+}
+.t-uppercase {
+    text-transform: uppercase;
+}
 
 .c-brand-banner {
     .c-background {
@@ -36,15 +59,11 @@ $yellow: #FDB92D;
         float: left;
         margin-top: 32px;
         margin-left: 15px;
-        font-size: 18px;
-        line-height: 22px;
         color: $blue;
     }
     .c-announcement-content { 
         display: block;
         float: left;
-        font-size: 18px;
-        line-height: 22px;
         color: $blue;
     }
 }
@@ -137,8 +156,6 @@ $yellow: #FDB92D;
     }
     .c-enroll {
         margin-top: 12px;
-        font-size: 18px;
-        line-height: 22px;
     }
 }
 
@@ -157,13 +174,6 @@ $yellow: #FDB92D;
         height: 100%;
         width: calc(100% - 353px);
         float: left;
-    }
-    .c-title {
-        margin-top: 29px;
-        font-size: 42px;
-        line-height: 22px;
-        color: #FFFFFF;
-        text-align: center;
     }
     .c-subtitle {
         margin-top: 20px;
@@ -226,18 +236,6 @@ $yellow: #FDB92D;
 
 }
 
-.text-right {
-    text-align: right;
-}
-.text-left {
-    text-align: left;
-}
-.text-uppercase {
-    text-transform: uppercase;
-}
-.text-bold {
-    font-weight: bold;
-}
 .flex-container {
     display: flex;
     align-items: center;

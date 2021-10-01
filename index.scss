@@ -1,28 +1,59 @@
 body {
     font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 22px;
 }
 
+/* variables */
 $blue: #00175A;
 $yellow: #FDB92D;
 
-.c-brand-banner {
-    .c-background {
+/* fonts */
+h1 {
+    font-size: 42px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+h2 {
+    font-size: 28px;
+    line-height: 30px;
+    color: $blue;
+    padding-top: 24px;
+    margin: 0;
+}
+h3 {
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 18px;
+    font-weight: bold;
+}
+/* utilities */
+.t-center {
+    text-align: center;
+}
+.t-right {
+    text-align: right;
+}
+.t-left {
+    text-align: left;
+}
+.t-uppercase {
+    text-transform: uppercase;
+}
+
+.brand-banner {
+    .bg {
         background: #F6F7F8;
-        height: 124px;
-        width: 1041px;
+        height: 125px;
+        width: 1040px;
         padding-left: 46px;
     }
-    .c-brand {
-        display: block;
+    .brand {
         float: left;
-        padding-top: 24px;
-        width: 119px; 
-        height: 57px;
-        font-size: 28px;
-        line-height: 30px;
-        color: $blue;
+        width: 120px; 
+        height: 60px;
     }
-    .c-separator {
+    .bar {
         display: block;
         float: left;
         margin-left: 17px;
@@ -31,20 +62,15 @@ $yellow: #FDB92D;
         margin-top: 24px;
         border: 2px solid $blue;
     }
-    .c-announcement {
-        display: block;
+    .announcement {
         float: left;
         margin-top: 32px;
         margin-left: 15px;
-        font-size: 18px;
-        line-height: 22px;
         color: $blue;
     }
-    .c-announcement-content { 
+    .announcement span { 
         display: block;
         float: left;
-        font-size: 18px;
-        line-height: 22px;
         color: $blue;
     }
 }
@@ -130,15 +156,8 @@ $yellow: #FDB92D;
         padding: inherit;
         color: $blue;
     }
-    .c-food-pass {
-        font-size: 28px;
-        line-height: 32px;
-        margin-top: 18px;
-    }
     .c-enroll {
         margin-top: 12px;
-        font-size: 18px;
-        line-height: 22px;
     }
 }
 
@@ -157,13 +176,6 @@ $yellow: #FDB92D;
         height: 100%;
         width: calc(100% - 353px);
         float: left;
-    }
-    .c-title {
-        margin-top: 29px;
-        font-size: 42px;
-        line-height: 22px;
-        color: #FFFFFF;
-        text-align: center;
     }
     .c-subtitle {
         margin-top: 20px;
@@ -226,18 +238,6 @@ $yellow: #FDB92D;
 
 }
 
-.text-right {
-    text-align: right;
-}
-.text-left {
-    text-align: left;
-}
-.text-uppercase {
-    text-transform: uppercase;
-}
-.text-bold {
-    font-weight: bold;
-}
 .flex-container {
     display: flex;
     align-items: center;

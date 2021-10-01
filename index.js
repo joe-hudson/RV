@@ -5,6 +5,17 @@ const content = {
   my_brand: "My Brand",
   enrollment_available: "Enrollment Available",
   through: "through",
+  up_to: "up to",
+  in_value: "in value",
+  for_limited_time: "For a limited time",
+  enjoy_food_pass: "Enjoy a complimentary Food Pass",
+  sub_12: "subscription for up to 12-months",
+  enroll_with_credit: "Enroll with your credit card and you could",
+  save_up_to: "save up to",
+  in_sub_annual: "in subscription fees annually!",
+  with_the: "with the",
+  food_plus_card: "Food Plus Card",
+  calc_yearly_savings: "Calculate Yearly Savings",
   currency_symbol: "$",
   dont_miss: "Don’t miss this opportunity! ",
   link_subscribe: "Click here to subscribe!",
@@ -64,9 +75,13 @@ class ProductImage extends React.Component {
       <div class="c-food">
         <div class="c-product">
           <div class="c-value-overlay">
-            <b class="c-content c-product-up-to t-uppercase">up to</b>
-            <b id="product-value" class="c-value"></b>
-            <b class="c-content c-product-in-value t-uppercase">in value</b>
+            <b class="c-content c-product-up-to t-uppercase">{content.up_to}</b>
+            <b class="c-value">
+              {<ProductValue value="119" specialOffer="139" />}
+            </b>
+            <b class="c-content c-product-in-value t-uppercase">
+              {content.in_value}
+            </b>
           </div>
         </div>
       </div>
@@ -81,22 +96,23 @@ class SignUp extends React.Component {
         <div class="c-background">
           <div class="c-content">
             <div class="c-barker t-uppercase">
-              <b>For a limited time</b>
+              <b>{content.for_limited_time}</b>
             </div>
             <h3>
-              Enjoy a complimentary Food Pass
+              {content.enjoy_food_pass}
               <br />
-              subscription for up to 12-months
+              {content.sub_12}
             </h3>
             <div class="c-enroll">
-              Enroll with your credit card and you could
+              {content.enroll_with_credit}
               <b>
-                save up to <span id="enroll-value"></span>
+                {content.save_up_to}
+                {<ProductValue value="119" specialOffer="139" />}
               </b>
               <br />
-              in subscription fees annually!
+              {content.in_sub_annual}
             </div>
-            <div id="subscribe" class="mt-20"></div>
+            <div class="mt-20">{<Subscribe />}</div>
           </div>
         </div>
       </div>
@@ -112,12 +128,12 @@ class Savings extends React.Component {
           <img class="c-piggy-bank" src="./images/piggy-bank.jpg" />
           <div class="c-calculator">
             <h1 class="t-center">
-              <b>Calculate Yearly Savings</b>
+              <b>{content.calc_yearly_savings}</b>
             </h1>
             <div class="c-subtitle">
-              with the <b class="c-hl">Food Plus Card</b>
+              {content.with_the} <b class="c-hl">{content.food_plus_card}</b>
             </div>
-            <div id="savings-calculator"></div>
+            {<SavingsCalculator savings={calc.default_savings} />}
           </div>
         </div>
       </div>
@@ -230,7 +246,3 @@ class SavingsCalculator extends React.Component {
 }
 
 ReactDOM.render(<Page />, document.getElementById("root"));
-// ReactDOM.render( <ProductValue value="119" specialOffer="139" />, document.getElementById("product-value"));
-// ReactDOM.render( <ProductValue value="119" specialOffer="139" />, document.getElementById("enroll-value"));
-// ReactDOM.render(<Subscribe />, document.getElementById("subscribe"));
-// ReactDOM.render( <SavingsCalculator savings={calc.default_savings} />, document.getElementById("savings-calculator"));

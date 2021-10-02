@@ -2,26 +2,26 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const content = {
-  my_brand: "My Brand",
-  enrollment_available: "Enrollment Available",
-  through: "through",
-  up_to: "up to",
-  in_value: "in value",
-  for_limited_time: "For a limited time",
-  enjoy_food_pass: "Enjoy a complimentary Food Pass",
-  sub_12: "subscription for up to 12-months",
-  enroll_with_credit: "Enroll with your credit card and you could",
-  save_up_to: "save up to",
-  in_sub_annual: "in subscription fees annually!",
-  with_the: "with the",
-  food_plus_card: "Food Plus Card",
-  calc_yearly_savings: "Calculate Yearly Savings",
-  currency_symbol: "$",
-  dont_miss: "Don’t miss this opportunity! ",
-  link_subscribe: "Click here to subscribe!",
-  sub_thanks: "Thank you for subscribing!",
-  annual_savings: "Annual Savings",
-  monthly_spending: "Monthly Spending"
+  my_brand: " My Brand ",
+  enrollment_available: " Enrollment Available ",
+  through: " through ",
+  up_to: " up to ",
+  in_value: " in value ",
+  for_limited_time: " For a limited time ",
+  enjoy_food_pass: " Enjoy a complimentary Food Pass ",
+  sub_12: " subscription for up to 12-months ",
+  enroll_with_credit: " Enroll with your credit card and you could ",
+  save_up_to: " save up to ",
+  in_sub_annual: " in subscription fees annually! ",
+  with_the: " with the ",
+  food_plus_card: " Food Plus Card ",
+  calc_yearly_savings: " Calculate Yearly Savings ",
+  currency_symbol: " $ ",
+  dont_miss: " Don’t miss this opportunity! ",
+  link_subscribe: " Click here to subscribe! ",
+  sub_thanks: " Thank you for subscribing! ",
+  annual_savings: " Annual Savings ",
+  monthly_spending: " Monthly Spending "
 };
 const calc = {
   months: 12,
@@ -52,13 +52,13 @@ class BrandBanner extends React.Component {
   }
   render() {
     return (
-      <div class="brand-banner">
-        <div class="bg">
-          <h2 class="brand t-uppercase">{content.my_brand}</h2>
-          <span class="bar"></span>
-          <div class="announcement">
+      <div className="brand-banner">
+        <div className="bg">
+          <h2 className="brand t-uppercase">{content.my_brand}</h2>
+          <span className="bar"></span>
+          <div className="announcement">
             <span>
-              <b class="t-uppercase">{content.enrollment_available}</b>
+              <b className="t-uppercase">{content.enrollment_available}</b>
               <br />
               {content.through} {this.state.end_date}
             </span>
@@ -72,16 +72,14 @@ class BrandBanner extends React.Component {
 class ProductImage extends React.Component {
   render() {
     return (
-      <div class="c-food">
-        <div class="c-product">
-          <div class="c-value-overlay">
-            <b class="c-content c-product-up-to t-uppercase">{content.up_to}</b>
-            <b class="c-value">
+      <div className="product-banner">
+        <div className="food">
+          <div className="overlay">
+            <b className="content up-to t-uppercase">{content.up_to}</b>
+            <b className="t-right">
               {<ProductValue value="119" specialOffer="139" />}
             </b>
-            <b class="c-content c-product-in-value t-uppercase">
-              {content.in_value}
-            </b>
+            <b className="content in-value t-uppercase">{content.in_value}</b>
           </div>
         </div>
       </div>
@@ -92,10 +90,10 @@ class ProductImage extends React.Component {
 class SignUp extends React.Component {
   render() {
     return (
-      <div class="c-sign-up">
-        <div class="c-background">
-          <div class="c-content">
-            <div class="c-barker t-uppercase">
+      <div className="sign-up">
+        <div className="bg">
+          <div className="content">
+            <div className="barker t-uppercase">
               <b>{content.for_limited_time}</b>
             </div>
             <h3>
@@ -103,7 +101,7 @@ class SignUp extends React.Component {
               <br />
               {content.sub_12}
             </h3>
-            <div class="c-enroll">
+            <div className="enroll">
               {content.enroll_with_credit}
               <b>
                 {content.save_up_to}
@@ -112,7 +110,7 @@ class SignUp extends React.Component {
               <br />
               {content.in_sub_annual}
             </div>
-            <div class="mt-20">{<Subscribe />}</div>
+            {<Subscribe />}
           </div>
         </div>
       </div>
@@ -123,15 +121,19 @@ class SignUp extends React.Component {
 class Savings extends React.Component {
   render() {
     return (
-      <div class="c-savings">
-        <div class="c-content">
-          <img class="c-piggy-bank" src="./images/piggy-bank.jpg" />
-          <div class="c-calculator">
-            <h1 class="t-center">
+      <div className="savings">
+        <div className="content">
+          <img
+            className="piggy-bank"
+            alt="Piggy Bank"
+            src="./images/piggy-bank.jpg"
+          />
+          <div className="calculator">
+            <h1 className="t-center">
               <b>{content.calc_yearly_savings}</b>
             </h1>
-            <div class="c-subtitle">
-              {content.with_the} <b class="c-hl">{content.food_plus_card}</b>
+            <div className="subtitle">
+              {content.with_the} <b className="hl">{content.food_plus_card}</b>
             </div>
             {<SavingsCalculator savings={calc.default_savings} />}
           </div>
@@ -159,7 +161,7 @@ class ProductValue extends React.Component {
   render() {
     if (this.state.isOfferActive) {
       return (
-        <span>
+        <span className="value">
           {content.currency_symbol}
           {this.state.specialOffer}
         </span>
@@ -178,21 +180,23 @@ class Subscribe extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      subscribed: false
+      subscribed: window.localStorage.subbed || false
     };
+    this.subscribe = this.subscribe.bind(this);
+  }
+  subscribe(e) {
+    e.preventDefault();
+    window.localStorage.subbed = true;
+    this.setState({ subscribed: window.localStorage.subbed });
   }
   render() {
     if (this.state.subscribed) {
-      return <div>{content.sub_thanks}</div>;
+      return <div className="subscribe">{content.sub_thanks}</div>;
     }
     return (
-      <div>
+      <div className="subscribe">
         {content.dont_miss}
-        <a
-          className="link"
-          href="#"
-          onClick={() => this.setState({ subscribed: true })}
-        >
+        <a className="link" href="subscribe" onClick={(e) => this.subscribe(e)}>
           {content.link_subscribe}
         </a>
       </div>
@@ -232,10 +236,10 @@ class SavingsCalculator extends React.Component {
             <span>{content.currency_symbol}</span>
           </div>
         </div>
-        <div className="c-spacer item"></div>
+        <div className="spacer item"></div>
         <div className="item auto jc-start fd-col">
           <div className="label t-left">{content.annual_savings}</div>
-          <div className="c-savings">
+          <div className="amount">
             {content.currency_symbol}
             {this.state.savings}
           </div>

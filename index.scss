@@ -1,14 +1,12 @@
+/* variables */
+$blue: #00175A;
+$yellow: #FDB92D;
+
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     line-height: 22px;
 }
-
-/* variables */
-$blue: #00175A;
-$yellow: #FDB92D;
-
-/* fonts */
 h1 {
     font-size: 42px;
     line-height: 22px;
@@ -75,8 +73,8 @@ h3 {
     }
 }
 
-.c-food{
-    .c-product {
+.product-banner{
+    .food {
         position: absolute;
         width: 916px;
         height: 534px;
@@ -86,7 +84,7 @@ h3 {
         background-repeat: no-repeat;
         z-index: 1;
     }
-    .c-value-overlay {
+    .overlay {
         position: absolute;
         width: 370px;
         height: 219px;
@@ -95,7 +93,7 @@ h3 {
         background: rgba(0, 23, 90, 0.4);
         z-index: 2;
     }
-    .c-content {
+    .content {
         position: absolute;
         display: block;
         text-align: right;
@@ -105,15 +103,11 @@ h3 {
         color: #FFFFFF;
         z-index: 5;
     }
-    .c-product-up-to {
+    .up-to {
         top: 15px;
         right: 32px;
     }
-    .c-product-in-value {
-        top: 178px;
-        right: 32px;
-    }
-    .c-value {
+    .value {
         position: absolute;
         display: block;
         height: 122px;
@@ -121,28 +115,30 @@ h3 {
         top: 43px;
         font-size: 132.817px;
         line-height: 133px;
-        /* or 100% */
-        text-align: right;
         color: #FFFFFF;
         z-index: 5;
     }
+    .in-value {
+        top: 178px;
+        right: 32px;
+    }
 }
 
-.c-sign-up {
-    .c-background {
+.sign-up {
+    .bg {
         position: absolute;
-        height: 341px;
-        top: 113px;
+        height: 340px;
+        top: 115px;
         width: 1440px;
         background-color: $blue;
     }
-    .c-content {
+    .content {
         position: absolute;
         margin-left: 50px;
-        margin-top: 79px;
+        margin-top: 40px;
         color: #FFFFFF;
     }
-    .c-barker {
+    .barker {
         background: $yellow;
         width: 204px;
         height: 28px;
@@ -151,40 +147,43 @@ h3 {
         font-size: 16px;
         line-height: 20px;
     }
-    .c-barker span {
+    .barker b {
         display: inline-block;
         padding: inherit;
         color: $blue;
     }
-    .c-enroll {
+    .subscribe {
+        margin-top: 30px;
+    }
+    .enroll {
         margin-top: 12px;
     }
 }
 
-.c-savings {
-    .c-content {
+.savings {
+    .content {
         position: absolute;
         top: 462px;
         width: 1440px;
         height: 333px;
         background: $blue;
     }
-    .c-piggy-bank {
+    .piggy-bank {
         float: left;
     }
-    .c-calculator {
+    .calculator {
         height: 100%;
         width: calc(100% - 353px);
         float: left;
     }
-    .c-subtitle {
+    .subtitle {
         margin-top: 20px;
         font-size: 24px;
         line-height: 22px;
         color: #FFFFFF;
         text-align: center;
     }
-    .c-hl {
+    .hl {
         color: $yellow;
     }
     .flex-container {
@@ -194,7 +193,7 @@ h3 {
     .item {
         color: #FFFFFF;
     }
-    .c-spacer {
+    .spacer {
         width: 95px;
     }
     .label {
@@ -227,7 +226,7 @@ h3 {
         line-height: 22px;
         font-weight: bold;
     }
-    .c-savings {
+    .amount {
         position: absolute;
         top: 200px;
         left: 990px;
@@ -245,9 +244,6 @@ h3 {
 }
 a {
     color: $yellow;
-}
-.mt-20 {
-    margin-top: 20px;
 }
 .flex-container {
     .item {

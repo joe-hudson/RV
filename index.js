@@ -180,17 +180,17 @@ class Subscribe extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      subscribed: window.localStorage.subbed || false
+      subscribed: window.localStorage.subscribed
     };
     this.subscribe = this.subscribe.bind(this);
   }
   subscribe(e) {
     e.preventDefault();
-    window.localStorage.subbed = true;
-    this.setState({ subscribed: window.localStorage.subbed });
+    window.localStorage.subscribed = "subscribed";
+    this.setState({ subscribed: window.localStorage.subscribed });
   }
   render() {
-    if (this.state.subscribed) {
+    if (this.state.subscribed === "subscribed") {
       return <div className="subscribe">{content.sub_thanks}</div>;
     }
     return (
